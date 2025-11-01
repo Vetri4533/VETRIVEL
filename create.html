@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="icon" type="image/png" href="ab.png">
+    <meta charset="UTF-8">
+    <title>Create New Account</title>
+    <style>
+        body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #0c1fcc 0%, #c2e9fb 100%);
+    font-family: 'Poppins', 'Roboto', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 18px;
+    padding: 40px 36px 32px 36px;
+    max-width: 420px;
+    width: 100%;
+    margin: 32px 0;
+    position: relative;
+    transition: box-shadow 0.3s;
+    border: 1.5px solid rgba(255,255,255,0.4);
+}
+
+.form-container:hover {
+    box-shadow: 0 12px 40px rgba(60, 60, 120, 0.22);
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    color: #a05334;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-shadow: 0 2px 8px #e3f0ff;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: #2d3a4b;
+    margin-bottom: 28px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    color: #3a4a5d;
+    margin-bottom: 7px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1.5px solid #e3e9f7;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: rgba(245, 247, 250, 0.95);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    margin-bottom: 2px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus {
+    border-color: #4f8cff;
+    box-shadow: 0 0 0 2px #e0e7ff;
+    background: #fff;
+}
+
+input[type="checkbox"] {
+    accent-color: #4f8cff;
+    margin-right: 7px;
+    transform: scale(1.1);
+    vertical-align: middle;
+}
+
+button[type="submit"], .submit-btn {
+    width: 100%;
+    background: linear-gradient(90deg, #4f8cff 60%, #38e8ff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 13px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 8px rgba(76, 110, 245, 0.10);
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 0.5px;
+}
+
+button[type="submit"]:hover, .submit-btn:hover {
+    background: linear-gradient(90deg, #38e8ff 0%, #4f8cff 100%);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px rgba(76, 110, 245, 0.13);
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 1rem;
+    color: #4a5568;
+}
+
+.form-footer a {
+    color: #4f8cff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.form-footer a:hover {
+    color: #38e8ff;
+    text-decoration: underline;
+}
+
+#message {
+    text-align: center;
+    font-size: 1.08rem;
+    margin-top: 12px;
+    min-height: 24px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    padding: 4px 0;
+}
+
+a {
+    color: #ffc44f;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #38e8ff;
+    text-decoration: underline;
+}
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input[type="password"],
+.password-wrapper input[type="text"] {
+    width: 100%;
+    padding-right: 38px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #4f8cff;
+    user-select: none;
+    transition: color 0.2s;
+}
+
+.toggle-password:hover {
+    color: #38e8ff;
+}
+
+@media (max-width: 600px) {
+    .form-container {
+        padding: 18px 6px 12px 6px;
+        max-width: 98vw;
+    }
+    h1 {
+        font-size: 1.4rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+}
+    </style>
+</head>
+<body >
+    <div class="form-container">
+        <center>
+             <h1 class="title">
+                    <img src="b1.webp" alt="Logo" style="width: 50px; height: 50px; vertical-align: middle; margin-right: 10px;">
+                    BooKies.in
+                </h1>
+                <!-- Subtitle welcoming the user -->
+                <h2 class="welcome">Welcome to Bookies</h2>
+        </center>
+        <h2>Create New Account</h2>
+       <form id="signUpForm">
+    <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+    <div class="form-group password-group">
+        <label for="password">Password</label>
+        <div class="password-wrapper">
+            <input type="password" id="password" name="password" placeholder="Create a password" required>
+            <span class="toggle-password" onclick="togglePassword('password', this)">
+                👁️
+            </span>
+        </div>
+    </div>
+    <div class="form-group password-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <div class="password-wrapper">
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+            <span class="toggle-password" onclick="togglePassword('confirmPassword', this)">
+                👁️
+            </span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        <label for="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            I agree to the <a href="https://policies.google.com/terms?hl=en">Terms and Conditions</a>
+        </label>
+    </div>
+    <div class="form-group">
+        <label for="privacy">
+            <input type="checkbox" id="privacy" name="privacy" required>
+            I agree to the <a href="https://policies.google.com/privacy?hl=en-US">Privacy Policy</a>
+        </label>
+    </div>
+    <div class="form-group">
+        <label for="newsletter">
+            <input type="checkbox" id="newsletter" name="newsletter">
+            Subscribe to our newsletter
+        </label>
+    </div>
+    <button type="submit" class="submit-btn">Create Account</button>
+    <div id="message" style="margin-top:10px;"></div>
+</form>
+        <div class="form-footer">
+            Already have an account? <a href="index.html">Login here</a>
+        </div>
+    </div>
+    <script>
+        // Show/hide password function (must be global)
+        function togglePassword(fieldId, icon) {
+            const input = document.getElementById(fieldId);
+            if (input.type === "password") {
+                input.type = "text";
+                icon.textContent = "🙈";
+            } else {
+                input.type = "password";
+                icon.textContent = "👁️";
+            }
+        }
+
+        document.getElementById('signUpForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const message = document.getElementById('message');
+
+            // Password match check
+            if (password !== confirmPassword) {
+                message.textContent = '❌ Passwords do not match!';
+                message.style.color = 'red';
+                return;
+            }
+
+            // Check if account already exists
+            let accounts = JSON.parse(localStorage.getItem('accounts')) || [];
+            const exists = accounts.some(acc => acc.email === email);
+            if (exists) {
+                message.textContent = '⚠️ Account already exists!';
+                message.style.color = 'orange';
+                return;
+            }
+
+            // Save new account
+            accounts.push({ name, email, password });
+            localStorage.setItem('accounts', JSON.stringify(accounts));
+
+            message.textContent = '✅ Account created successfully! Redirecting...';
+            message.style.color = 'green';
+
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

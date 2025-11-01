@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Google Sign-In</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="signin.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo">
+      <h2 class="title">Sign in</h2>
+      <p class="subtitle">Use your Google Account</p>
+
+      <form id="loginForm">
+        <!-- STEP 1: Email -->
+        <div class="step" id="email-step">
+          <div class="input-group">
+            <input type="email" id="email" required />
+            <label for="email">Email or phone</label>
+          </div>
+
+          <div class="forgot">
+            <a href="https://accounts.google.com/lifecycle/steps/signup/name?continue=https://mail.google.com/mail/e-11-36b2ba70ba147b75ffa7c3d47f6af-9b4fd3ae69949589d9f0ca3ea0266ea1b9de61e4&dsh=S1779389992:1754415334624858&flowEntry=SignUp&flowName=GlifWebSignIn&service=mail&TL=ALgCv6zDBU1azSs4rQHxquVzphK7e21bYnTYN-fd159-W_yeHgTNjjKszf0DSTsk">Forgot email?</a>
+          </div>
+
+          <p class="guest">Not your computer? Use Guest mode to sign in privately. <a href="#">Learn more</a></p>
+
+          <div class="actions">
+            <a href="https://accounts.google.com/lifecycle/steps/signup/name?continue=https://mail.google.com/mail/e-11-36ab3ecf50b9ccda782bf9b9515bc-64d7f5962c05f930d40ce5a8179823d5ad88d9c6&dsh=S1544389774:1754414820799247&flowEntry=SignUp&flowName=GlifWebSignIn&service=mail&TL=ALgCv6xUFj4L2VSzU8FCAVaXVFGWUoF7oP7pbYtIR-aabV7QCbNVhS0waDTy-Hgj" class="create">Create account</a>
+            <button type="button" onclick="goToPassword()">Next</button>
+          </div>
+        </div>
+
+        <!-- STEP 2: Password -->
+        <div class="step hidden" id="password-step">
+          <div class="input-group">
+            <input type="password" id="password" required />
+            <label for="password">Enter your password</label>
+            <span class="toggle-password" onclick="togglePassword()">👁️</span>
+          </div>
+
+          <p id="error" class="error-message hidden">Incorrect password. Try again.</p>
+
+          <div class="forgot">
+            <a href="https://accounts.google.com/lifecycle/steps/signup/name?continue=https://mail.google.com/mail/e-11-36b399de562a07ad44ca6c78d8e72-1932446bc7e67a685a4e640e747a74b346cea9d6&dsh=S-486223613:1754415394595087&flowEntry=SignUp&flowName=GlifWebSignIn&service=mail&TL=ALgCv6yZLuE276Yd1XzcZQ6xJVHC5ujX_2cXnsBimXP7pU9FzXvc1g7AxukNNbVv">Forgot password?</a>
+          </div>
+
+          <div class="actions">
+            <a href="file:///C:/Users/NandhiniPeriyasaamy/Documents/VS/googlesignin.html"backToEmail()" class="create">Back</a>
+            <button type="submit">Login</button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Success -->
+        <div class="step hidden" id="success-step">
+          <p class="success-msg">✅ Login successful! Welcome back.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

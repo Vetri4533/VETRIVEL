@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #e8f0fe, #f1f3f4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  display: block;
+  width: 100px;
+  margin: 0 auto 20px auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin: 10px 0 5px;
+  color: #202124;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #5f6368;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 12px;
+  font-size: 15px;
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input-group label {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  font-size: 15px;
+  color: #80868b;
+  pointer-events: none;
+  background: white;
+  padding: 0 4px;
+  transition: 0.2s ease all;
+}
+
+.input-group input:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown):valid + label {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  color: #1a73e8;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.forgot {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.forgot a {
+  color: #1a73e8;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.forgot a:hover {
+  text-decoration: underline;
+}
+
+.guest {
+  font-size: 13px;
+  color: #5f6368;
+  margin-bottom: 30px;
+}
+
+.guest a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.guest a:hover {
+  text-decoration: underline;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create {
+  color: #1a73e8;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.create:hover {
+  text-decoration: underline;
+}
+
+button {
+  background: linear-gradient(to right, #1a73e8, #4285f4);
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #1669c1, #2c78e4);
+}
+
+/* Hidden step */
+.step {
+  animation: fadeIn 0.3s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Error and success */
+.error-message {
+  color: #d93025;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.success-msg {
+  color: #188038;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
